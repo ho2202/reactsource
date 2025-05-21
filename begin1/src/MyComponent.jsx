@@ -1,6 +1,6 @@
 import React from "react";
 
-const MyComponent = ({ name, age = "15" }) => {
+const MyComponent = ({ name, age = "15", children }) => {
   // const name = "";
 
   const user = {
@@ -16,6 +16,7 @@ const MyComponent = ({ name, age = "15" }) => {
 
   return (
     <>
+      <h1>children - {children}</h1>
       <h2>
         name: {user.name}({user.email})
       </h2>
