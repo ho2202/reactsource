@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard";
 const Product = () => {
   const product = {
     name: "Laptop",
-    price: 123.12345,
+    price: 123.4567,
   };
 
   return (

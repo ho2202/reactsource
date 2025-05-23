@@ -8,11 +8,14 @@ const MyStyle = () => {
     fontWeight: "bold",
     padding: 16,
   };
+
   return (
     <div>
       <div style={style}>홍길동</div>
-      <div style={{ color: "red", fontSize: "28px" }}>홍길동</div>
+      <div style={{ color: "red", fontSize: "25px" }}>홍길동</div>
+      {/* class == className, maxlength == maxLength, readonly == readOnly  */}
       <input type="text" className="" maxLength={20} readOnly={false} />
+      <br />
     </div>
   );
 };

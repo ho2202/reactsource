@@ -5,12 +5,18 @@ const ParentCardLayout = () => {
   return (
     <>
       <CardLayout>
-        <p>Props of C</p>
+        <p>Props of Components</p>
       </CardLayout>
-      <CardLayout title="Details"></CardLayout>
+      <CardLayout title="Details">
+        <ul>
+          <li>Feature A</li>
+          <li>Feature B</li>
+          <li>Feature C</li>
+        </ul>
+      </CardLayout>
       <CardLayout title="Contact">
-        <p>Email : example@e.com</p>
-        <p>Phone : 123-123-1234</p>
+        <p>Email: example@example.com</p>
+        <p>Phone: 123-456-7890</p>
       </CardLayout>
     </>
   );

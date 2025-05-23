@@ -6,6 +6,7 @@ const cards = [
   { idx: 2, title: "React Composition", content: "Composition makes your components more reusable", author: "Charlie" },
   { idx: 3, content: "Composition makes your components more reusable" },
 ];
+
 const Card = () => {
   return (
     <>

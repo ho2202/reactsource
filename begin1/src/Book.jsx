@@ -1,13 +1,17 @@
 import React from "react";
 
 const books = [
-  { id: 1, title: "React Basic", published: true, publisher: "Manning" },
+  { id: 1, title: "React Basic", published: false, publisher: "Manning" },
   { id: 2, title: "Advanced hooks", published: false, publisher: "Oreilly" },
-  { id: 3, title: "JSX in Depth", published: true, publisher: "Pack" },
+  { id: 3, title: "JSX in Depth", published: false, publisher: "Packt" },
 ];
 
-// published == true 면 추출
+// books 배열에서 published == true 추출
 const published = books.filter((book) => book.published);
+
+// 참 : 0 제외 숫자, 'ans', [],{}
+// 거짓 : 0, '',null,undefined,NaN
+
 const Book = () => {
   return (
     <div>
