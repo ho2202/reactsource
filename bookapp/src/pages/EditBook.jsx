@@ -1,7 +1,13 @@
 import React from "react";
+import BookForm from "./../components/BookForm";
 
 const EditBook = () => {
-  return <div>edit</div>;
+  return (
+    <div>
+      <h1 className="text-[32px]">Add New Book</h1>
+      <BookForm />
+    </div>
+  );
 };
 
 export default EditBook;
