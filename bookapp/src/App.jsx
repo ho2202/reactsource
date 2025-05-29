@@ -1,17 +1,22 @@
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 import "./App.css";
 import Layout from "./components/Layout";
 import { Route, Routes } from "react-router-dom";
-import AddBook from "./pages/AddBook";
 import Home from "./pages/Home";
+import AddBook from "./pages/AddBook";
 import EditBook from "./pages/EditBook";
 import BookDetails from "./pages/BookDetails";
 import Error from "./components/Error";
 
-function App() {
-  // /add > Addbook
-  // /edit/1 > EditBook
-  // /books1 > BookDetails
+// http://localhost:5173/ => Home
+// http://localhost:5173/add => AddBook
+// http://localhost:5173/edit/1 => EditBook
+// http://localhost:5173/books/1 => BookDetails
+// 잘못된 경로 => Error
 
+function App() {
   return (
     <>
       <Layout>

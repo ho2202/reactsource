@@ -1,11 +1,11 @@
 import React from "react";
-import BookList from "./../components/BookList";
+import BookList from "../components/BookList";
 
 const Home = () => {
   return (
     <div>
-      <header className="flext mb-6">
-        <h1 className="grow-1 text-[32px]">BookList</h1>
+      <header className="flex mb-6">
+        <h1 className="grow-1 text-[32px]">Book List</h1>
         <div>
           <input
             type="text"
@@ -15,7 +15,7 @@ const Home = () => {
           <select
             name="genre"
             id=""
-            className="outline-0 p-2 border-2  border-gray-300 rounded-sm ml-2 text-[.9em] leading-tight"
+            className="outline-0 p-2 border-2 border-gray-300 rounded-sm ml-2 text-[.9em] leading-tight"
           >
             <option value="">All Genres</option>
             <option value=""></option>
