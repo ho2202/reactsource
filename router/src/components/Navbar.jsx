@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navi = useNavigate();
@@ -17,11 +17,13 @@ const Home = () => {
         <button onClick={() => navTo("/about")}>About</button>
         <button onClick={() => navTo("/contact")}>Contact</button>
       </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };

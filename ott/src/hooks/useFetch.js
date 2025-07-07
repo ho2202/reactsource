@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getList, putAvailableBook } from "../api/bookApi";
+import { getList } from "../api/api";
 
 const initState = {
   current: 0,
@@ -18,26 +18,19 @@ export const useFetch = (moveState) => {
   const [data, setData] = useState(initState);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { moveToList, page, size, genre, keyword, refresh } = moveState;
-
-  const toggleAvailable = (id, curAvailable) => {
-    putAvailableBook({ id: id, available: !curAvailable }).then((data) => {
-      console.log(data);
-      moveToList({ page, size, genre, keyword });
-    });
-  };
+  const { moveToList, page, size, type, keyword, refresh } = moveState;
 
   useEffect(() => {
-    getList({ page, size, genre, keyword })
+    getList({ page, size, type, keyword })
       .then((result) => {
-        console.log(result);
+        console.log(result.dtoList);
 
         setData(result);
 
         setLoading(false);
       })
       .catch((e) => setError(e.message));
-  }, [page, size, genre, keyword, refresh]);
+  }, [page, size, type, keyword, refresh]);
 
-  return { data, loading, error, toggleAvailable };
+  return { data, loading, error };
 };
