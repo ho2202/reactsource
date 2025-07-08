@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const error = () => {
+const Error = () => {
   return (
     <div class="card error-card text-center p-4 bg-dark border-0 text-white">
       <div class="error-icon mb-2">
@@ -20,4 +20,4 @@ const error = () => {
   );
 };
 
-export default error;
+export default Error;

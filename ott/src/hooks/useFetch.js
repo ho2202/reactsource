@@ -23,8 +23,6 @@ export const useFetch = (moveState) => {
   useEffect(() => {
     getList({ page, size, type, keyword })
       .then((result) => {
-        console.log(result.dtoList);
-
         setData(result);
 
         setLoading(false);

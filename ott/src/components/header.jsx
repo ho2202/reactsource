@@ -3,6 +3,8 @@ import Home from "../pages/Home";
 import Error from "./Error";
 import MovieLists from "../pages/MovieLists";
 import MovieInfo from "../pages/MovieInfo";
+import "../css/bootstrap.min.css";
+import "../css/style.css";
 
 const Header = ({ user }) => {
   let logined = false;
