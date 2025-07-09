@@ -6,14 +6,14 @@ import MovieInfo from "../pages/MovieInfo";
 import "../css/bootstrap.min.css";
 import "../css/style.css";
 
-const Header = ({ user }) => {
+const Header = () => {
   let logined = false;
 
-  if (user) {
-    logined = true;
-  } else {
-    logined = false;
-  }
+  // if (user) {
+  //   logined = true;
+  // } else {
+  //   logined = false;
+  // }
   return (
     <div>
       <div className="container">
@@ -47,7 +47,7 @@ const Header = ({ user }) => {
               </form>
 
               {/* <!-- 로그인: 프로필 이미지 --> */}
-              <Link to={"/p"}>{showProfile(user)}</Link>
+              <Link to={"/p"}>{showProfile(logined)}</Link>
             </div>
           </div>
         </div>

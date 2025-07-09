@@ -8,12 +8,11 @@ export const getList = async (pageParam) => {
   const res = await axios.get(`${API_SERVER_HOST}/list`); //, { params: page, size: size, type: type, keyword: keyword });
 
   return res.data;
-  //   return null;
 };
 
 export const getRead = async (id) => {
-  console.log(id);
   const res = await axios.get(`${API_SERVER_HOST}/read/${id}`); //, { params: page, size: size, type: type, keyword: keyword });
+  console.log(res.data);
 
   return res.data;
 };
